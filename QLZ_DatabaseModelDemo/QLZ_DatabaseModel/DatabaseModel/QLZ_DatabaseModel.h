@@ -14,7 +14,6 @@
 /**
  *	@brief	返回创建数据库时的primaryKey
  *
- *	@param 无
  */
 + (NSString *)primaryKey;
 
@@ -23,7 +22,6 @@
  *              key:要写入数据库的字段，value:对应存入的字段名 支持keyPath的'.'格式
  *              可选，如不重写，则按照父类中的JSONDictionary返回
  *
- *	@param 无
  */
 + (NSDictionary *)databaseDictionary;
 
@@ -31,7 +29,6 @@
  *	@brief	返回解析数据库要忽略不解析的字段
  *              可选，如不重写，则无忽略解析字段
  *
- *	@param 无
  */
 + (NSArray *)databaseAnalysisEgnoreData;
 
@@ -39,14 +36,14 @@
  *	@brief	当数据解析结束，会把之前定义的忽略字段以key value形式放回，方便自行解析
  *              当无忽略解析字段时，不调用
  *
- *	@param 无
+ *	@param egnoreDictionary : 解析时候返回的忽略字段
  */
 - (void)analysisWithEgnoreData:(NSDictionary *)egnoreDictionary;
 
 /**
  *	@brief  按照数据库的Dictionary解析成字段，默认不需要重写
  *
- *	@param 无
+ *	@param JSON : 解析模型JSON
  */
 - (id)initWithDatabaseJSON:(NSDictionary *)JSON;
 
