@@ -1,0 +1,4 @@
+platform :ios, '7.0'
+target 'QLZ_DatabaseModel' do
+pod 'QLZ_JSONModel', '~> 0.1'
+end
